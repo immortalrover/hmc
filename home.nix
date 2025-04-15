@@ -7,22 +7,25 @@ let
   ghosttyPath = "${config.home.homeDirectory}/.config/home-manager/dotfiles/ghostty";
 in
 {
-  home.username = "rover";
-  home.homeDirectory = "/home/rover";
-  home.stateVersion = "24.11";
-  home.packages = with pkgs; [
-    neofetch
-    git
-    lua-language-server
-    pyright
-    prettierd
-    nil
-    nixfmt-rfc-style
-    lazygit
-    yarn
-    obsidian
-    neovim
-  ];
+  home = {
+    username = "rover";
+    homeDirectory = "/home/rover";
+    stateVersion = "24.11";
+    packages = with pkgs; [
+      neofetch
+      git
+      lua-language-server
+      pyright
+      prettierd
+      nil
+      nixfmt-rfc-style
+      lazygit
+      yarn
+      obsidian
+      neovim
+    ];
+  };
+
   xdg = {
     enable = true;
     configFile = {
