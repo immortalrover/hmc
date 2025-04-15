@@ -36,10 +36,21 @@ in
     };
   };
 
-  programs.direnv = {
-    enable = true;
-    enableZshIntegration = true;
-    nix-direnv.enable = true;
+  programs = {
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
+    eza = {
+      enable = true;
+      enableZshIntegration = true;
+      colors = "always";
+      extraOptions = [
+        "--group-directories-first"
+        "--header"
+      ];
+    };
   };
 
   programs.home-manager.enable = true;
