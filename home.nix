@@ -50,6 +50,8 @@ in
         "--group-directories-first"
         "--header"
       ];
+      git = true;
+      icons = "auto";
     };
   };
 
