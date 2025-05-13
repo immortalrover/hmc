@@ -23,6 +23,9 @@ in
       yarn
       obsidian
       neovim
+      tmux
+      ffmpeg-full
+      # go-musicfox
     ];
   };
 
