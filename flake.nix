@@ -38,7 +38,7 @@
 
           {
             home.packages = [
-              nix-gl-host.packages.${system}.default
+              # nix-gl-host.packages.${system}.default
             ];
           }
         ];

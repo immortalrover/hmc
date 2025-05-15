@@ -5,6 +5,45 @@
 }:
 let
   ghosttyPath = "${config.home.homeDirectory}/.config/home-manager/dotfiles/ghostty";
+  tex = (
+    pkgs.texlive.combine {
+      inherit (pkgs.texlive)
+        scheme-basic
+        ctex
+        float
+        caption
+        unicode-math
+        mathtools
+        extarrows
+        ragged2e
+        booktabs
+        physics
+        supertabular
+        multirow
+        ntheorem
+        gbt7714
+        pgfplots
+        listings
+        shipunov
+        seqsplit
+        siunitx
+        threeparttable
+        xltabular
+        ltablex
+        makecell
+        diagbox
+        pict2e
+        algorithm2e
+        ifoddpage
+        relsize
+        tocloft
+        footmisc
+        bigfoot
+        psnfss
+        times
+        ;
+    }
+  );
 in
 {
   home = {
@@ -24,7 +63,11 @@ in
       obsidian
       neovim
       tmux
-      ffmpeg-full
+      zathura
+      discord
+      tex
+
+      # ffmpeg-full
       # go-musicfox
     ];
   };
